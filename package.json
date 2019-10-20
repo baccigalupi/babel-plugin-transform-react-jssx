@@ -1,0 +1,29 @@
+{
+  "name": "babel-plugin-transform-jssx",
+  "version": "0.1.0",
+  "description": "Babel transformer plugin for converting jsx templates in a strict logicless way",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --require @babel/register test"
+  },
+  "keywords": [
+    "babel",
+    "jsx",
+    "strict"
+  ],
+  "author": "",
+  "repository": "https://github.com/baccigalupi/babel-plugin-transform-jssx",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/helper-builder-react-jsx": "^7.3.0",
+    "@babel/helper-plugin-utils": "^7.0.0",
+    "@babel/plugin-syntax-jsx": "^7.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "mocha": "^6.2.1"
+  }
+}
