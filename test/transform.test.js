@@ -120,6 +120,19 @@ describe("Stricter jsx transformation", () => {
       import thing from "./thing"
       export default thing() + 3 
     `
+    assert.doesNotThrow(() => { transform(input) })
+  })
+
+  it("allows nested jsx", () => {
+    const input = `
+      <section class='user-detail'>
+        <div class="first-name">{ name.first }</div>
+        <div class="last-name">{ lastName }</div>
+        <div class="email">{ email }</div>
+        <div class="phone">{ phone }</div>
+        <a href={ editLink }>Edit</a>
+      </section>
+    `
 
     assert.doesNotThrow(() => { transform(input) })
   })
